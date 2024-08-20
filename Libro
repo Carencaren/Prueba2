@@ -1,1 +1,41 @@
+# Clase base
+class Material:
+    def __init__(self, titulo, autor, anio_publicacion):
+        self.titulo = titulo
+        self.autor = autor
+        self.anio_publicacion = anio_publicacion
 
+    def obtener_informacion(self):
+        return f"Título: {self.titulo}, Autor: {self.autor}, Año: {self.anio_publicacion}"
+
+    def __str__(self):
+        return self.obtener_informacion()
+
+# Subclase de Material
+class Libro(Material):
+    def __init__(self, titulo, autor, anio_publicacion, isbn):
+        super().__init__(titulo, autor, anio_publicacion)
+        self.isbn = isbn
+
+    def obtener_informacion(self):
+        return f"{super().obtener_informacion()}, ISBN: {self.isbn}"
+
+# Otra subclase de Material
+class Revista(Material):
+    def __init__(self, titulo, autor, anio_publicacion, numero_edicion):
+        super().__init__(titulo, autor, anio_publicacion)
+        self.numero_edicion = numero_edicion
+
+    def obtener_informacion(self):
+        return f"{super().obtener_informacion()}, Número de edición: {self.numero_edicion}"
+
+# Ejemplo de uso
+def main():
+    libro = Libro("El Principito", "Antoine de Saint-Exupéry", 1943, "978-3-16-148410-0")
+    revista = Revista("National Geographic", "Various", 2024, 123)
+
+    print(libro)
+    print(revista)
+
+if __name__ == "__main__":
+    main()
