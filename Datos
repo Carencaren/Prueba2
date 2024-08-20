@@ -1,0 +1,20 @@
+# Inicializamos la lista con 10 datos
+datos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print("Lista inicial:")
+print(datos)
+
+# Pedimos al usuario que ingrese nuevos datos para las posiciones 2, 4, 7 y 10
+nuevo_dato2 = int(input("Ingrese nuevo dato para la posición 2: "))
+nuevo_dato4 = int(input("Ingrese nuevo dato para la posición 4: "))
+nuevo_dato7 = int(input("Ingrese nuevo dato para la posición 7: "))
+nuevo_dato10 = int(input("Ingrese nuevo dato para la posición 10: "))
+
+datos[1] = nuevo_dato2
+datos[3] = nuevo_dato4
+datos[6] = nuevo_dato7
+datos[9] = nuevo_dato10
+
+# Imprimimos la lista actualizada
+print("Lista actualizada:")
+print(datos)
